@@ -1,24 +1,16 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import PropTypes from 'prop-types';
 import HeroList from '../../components/heroList/HeroList';
-import { HeroListPageContainer } from './HeroListPage.styles';
+import { PageContainer } from './HeroListPage.styles';
 
-export default function HeroListPage() {
-  const [heroes, setHeroes] = useState([]);
-
-  const getHeroes = useCallback(async () => {
-    const response = await axios('http://hahow-recruit.herokuapp.com/heroes');
-    const data = await response.data;
-    setHeroes(data);
-  }, []);
-
-  useEffect(() => {
-    getHeroes();
-  }, [getHeroes]);
-
+export default function HeroListPage({ heroes }) {
   return (
-    <HeroListPageContainer>
+    <PageContainer>
       <HeroList heroes={heroes} />
-    </HeroListPageContainer>
+    </PageContainer>
   );
 }
+
+HeroListPage.propTypes = {
+  heroes: PropTypes.array,
+};

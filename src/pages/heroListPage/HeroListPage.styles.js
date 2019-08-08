@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeroListPageContainer = styled.div`
+export const PageContainer = styled.div`
   width: 80vw;
   display: flex;
   flex-direction: column;
