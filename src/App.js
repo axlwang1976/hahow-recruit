@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import axios from 'axios';
-import Router from './routes/router';
+import Router from './routes/Router';
 import './App.css';
 
 export default function App() {
