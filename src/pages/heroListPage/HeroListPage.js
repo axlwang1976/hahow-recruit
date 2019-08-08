@@ -1,16 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import HeroList from '../../components/heroList/HeroList';
 import { PageContainer } from './HeroListPage.styles';
 
-export default function HeroListPage({ heroes }) {
+export default function HeroListPage() {
   return (
     <PageContainer>
-      <HeroList heroes={heroes} />
+      <HeroList />
     </PageContainer>
   );
 }
-
-HeroListPage.propTypes = {
-  heroes: PropTypes.array,
-};
